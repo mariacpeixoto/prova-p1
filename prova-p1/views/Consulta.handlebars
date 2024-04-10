@@ -1,0 +1,49 @@
+<div class="container">
+  <h1>Tela de Consulta</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Endereco</th>
+        <th scope="col">Bairro</th>
+        <th scope="col">Cep</th>
+        <th scope="col">Cidade</th>
+        <th scope="col">Estado</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    {{#each post}}
+    {{#dataValues}}
+    <tbody id="TableData">
+      <tr>
+        <td scope="col">
+          {{nome}}
+        </td>
+        <td scope="col">
+          {{endereco}}
+        </td>
+        <td scope="col">
+          {{bairro}}
+        </td>
+        <td scope="col">
+          {{cep}}
+        </td>
+        <td scope="col">
+          {{cidade}}
+        </td>
+        <td scope="col">
+          {{estado}}
+        </td>
+        <td scope="col">
+          <button type="button" class="btn btn-primary" style="width: 72px;"><a
+              href="/editar/{{id}}">Editar</a></button>
+          <button type="button" class="btn btn-danger" style="width: 72px;"><a
+              href="/excluir/{{id}}">Excluir</a></button>
+        </td>
+      </tr>
+    </tbody>
+    {{/dataValues}}
+    {{/each}}
+  </table>
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
